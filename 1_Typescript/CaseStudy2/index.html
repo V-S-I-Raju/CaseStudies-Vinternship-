@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Basic Syntax in TypeScript</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Basic Syntax in TypeScript</h1>
+
+<p class="subtitle">
+Learn the fundamental rules and structure for writing clean TypeScript code
+</p>
+
+</header>
+
+
+<div class="container">
+
+<!-- ANALOGY -->
+
+<section class="card">
+
+<h2>Understanding Syntax</h2>
+
+<p>
+Learning TypeScript syntax is like learning the grammar of a new language.
+Variables, functions, and classes are like words and sentences, while syntax
+rules act like grammar that keeps communication clear.
+</p>
+
+</section>
+
+
+<!-- BASIC BUILDING BLOCKS -->
+
+<section>
+
+<h2 class="section-title">Building Blocks of TypeScript</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Variables</h3>
+<p>Store values using types like string, number, and boolean.</p>
+</div>
+
+<div class="feature-card">
+<h3>Functions</h3>
+<p>Reusable blocks of code that perform specific tasks.</p>
+</div>
+
+<div class="feature-card">
+<h3>Classes</h3>
+<p>Blueprints used to create objects and organize logic.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAM STRUCTURE -->
+
+<section class="card">
+
+<h2>TypeScript Program Structure</h2>
+
+<p>A TypeScript program usually contains:</p>
+
+<ul>
+
+<li><strong>Variables</strong> – store information</li>
+
+<li><strong>Functions</strong> – perform tasks</li>
+
+<li><strong>Classes</strong> – organize behavior</li>
+
+<li><strong>Statements & Expressions</strong> – instructions executed by the program</li>
+
+<li><strong>Comments</strong> – notes that explain the code</li>
+
+</ul>
+
+</section>
+
+
+<!-- CODE EXAMPLE -->
+
+<section class="card">
+
+<h2>Code Example</h2>
+
+<pre class="code-block"><code>
+// Variable
+let productName: string = "Bananas";
+
+// Function
+function printProduct(name: string): void {
+  console.log("Product: " + name);
+}
+
+// Class
+class Store {
+  open(): void {
+    console.log("Store is open!");
+  }
+}
+
+// Using the function
+printProduct(productName);
+
+// Using the class
+let store = new Store();
+store.open();
+</code></pre>
+
+<ul class="code-explanation">
+
+<li><code>let productName: string</code> declares a variable.</li>
+
+<li><code>function printProduct()</code> defines a reusable function.</li>
+
+<li><code>class Store</code> defines a blueprint for objects.</li>
+
+<li><code>new Store()</code> creates an object from the class.</li>
+
+</ul>
+
+</section>
+
+
+<!-- IDENTIFIER RULES -->
+
+<section class="card">
+
+<h2>Identifier Rules</h2>
+
+<p>Identifiers are names for variables, functions, and classes.</p>
+
+<ul>
+
+<li>Can include letters, numbers, <code>_</code> or <code>$</code></li>
+
+<li>Cannot start with a number</li>
+
+<li>Cannot contain spaces</li>
+
+<li>Cannot be a reserved keyword</li>
+
+<li>Are case-sensitive</li>
+
+</ul>
+
+</section>
+
+
+<!-- KEYWORDS -->
+
+<section class="card">
+
+<h2>Common TypeScript Keywords</h2>
+
+<p>These reserved words have special meaning in TypeScript.</p>
+
+<pre class="code-block"><code>
+break   case   const   continue
+do      else   enum    export
+for     function   if   import
+let     new    return  static
+switch  this   throw   true
+try     typeof var     while
+</code></pre>
+
+</section>
+
+
+<!-- COMMENTS -->
+
+<section class="card">
+
+<h2>Comments in TypeScript</h2>
+
+<pre class="code-block"><code>
+// Single-line comment
+
+/*
+Multi-line comment
+used to explain code
+*/
+</code></pre>
+
+</section>
+
+
+<!-- COMPILER -->
+
+<section class="card">
+
+<h2>Compiling and Running TypeScript</h2>
+
+<pre class="code-block"><code>
+1. Save the file
+   example.ts
+
+2. Compile it
+   tsc example.ts
+
+3. Run the JavaScript
+   node example.js
+</code></pre>
+
+</section>
+
+
+<!-- COMPILER FLAGS -->
+
+<section class="card">
+
+<h2>Useful Compiler Flags</h2>
+
+<pre class="code-block"><code>
+tsc --help
+
+tsc --target ES6
+
+tsc --module commonjs
+
+tsc --removeComments
+
+tsc --watch
+
+tsc file1.ts file2.ts
+</code></pre>
+
+</section>
+
+
+<!-- INTERACTIVE CHALLENGE -->
+
+<section class="card">
+
+<h2>Interactive Challenge</h2>
+
+<label>Favorite Fruit</label>
+<input type="text" id="fruitInput" placeholder="Enter a fruit">
+
+<label>Enter a Number</label>
+<input type="number" id="numberInput" placeholder="Enter a number">
+
+<button id="runChallenge">Run Challenge</button>
+
+<p id="challengeOutput"></p>
+
+</section>
+
+
+<!-- CLASS DEMO -->
+
+<section class="card">
+
+<h2>Object-Oriented Example</h2>
+
+<button id="runClassDemo">Run Class Example</button>
+
+<div class="console">
+
+<h4>Console Output</h4>
+
+<div id="consoleBox"></div>
+
+</div>
+
+</section>
+
+
+<!-- KEY TAKEAWAYS -->
+
+<section class="card">
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>TypeScript syntax defines how programs are written and structured.</li>
+
+<li>Use variables, functions, classes, and comments to organize code.</li>
+
+<li>Follow identifier rules to avoid errors.</li>
+
+<li>Indent and format code to improve readability.</li>
+
+<li>Compile TypeScript using the TypeScript compiler.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
