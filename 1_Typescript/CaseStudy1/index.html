@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introduction to TypeScript</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Introduction to TypeScript</h1>
+
+<p class="subtitle">
+Build safer and scalable JavaScript applications using TypeScript
+</p>
+
+</header>
+
+
+<div class="container">
+
+<!-- FEATURES -->
+
+<section>
+
+<h2 class="section-title">Why Use TypeScript?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Static Typing</h3>
+<p>Catch errors before running the program by defining data types.</p>
+</div>
+
+<div class="feature-card">
+<h3>Better Tooling</h3>
+<p>Editors provide intelligent autocomplete and refactoring.</p>
+</div>
+
+<div class="feature-card">
+<h3>Scalable Projects</h3>
+<p>Perfect for large applications and team development.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HELLO WORLD -->
+
+<section class="card">
+
+<h2>Hello World Example</h2>
+
+<p>Click the button to run your first TypeScript program.</p>
+
+<button id="runProgram">Run Program</button>
+
+<div class="console">
+
+<h4>Console Output</h4>
+
+<div id="consoleBox"></div>
+
+</div>
+
+</section>
+
+
+<!-- INTERACTIVE CHALLENGE -->
+
+<section class="card">
+
+<h2>Interactive Challenge</h2>
+
+<label>Your Name</label>
+<input type="text" id="nameInput" placeholder="Enter your name">
+
+<label>Your Age</label>
+<input type="number" id="ageInput" placeholder="Enter your age">
+
+<button id="generateGreeting">Generate Greeting</button>
+
+<p id="greetingOutput"></p>
+
+</section>
+
+
+<!-- CODE EXAMPLE -->
+
+<section class="card">
+
+<h2>Code Example</h2>
+
+<pre class="code-block"><code>
+let name: string = "V S I Raju";
+let age: number = 22;
+
+let message: string = `Hello ${name}! You are ${age} years old.`;
+
+console.log(message);
+</code></pre>
+
+<ul class="code-explanation">
+
+<li>
+<code>let name: string</code> declares a variable that must always store text.
+</li>
+
+<li>
+<code>let age: number</code> declares a variable that must store a number.
+</li>
+
+<li>
+<code>`Hello ${name}! You are ${age} years old.`</code> is a 
+<strong>template string</strong> that inserts variables directly into text.
+</li>
+
+<li>
+<code>console.log(message)</code> prints the final message to the console.
+</li>
+
+</ul>
+
+<p class="try-text">
+Try changing the values of <code>name</code> and <code>age</code> and run it again!
+</p>
+
+</section>
+
+
+<!-- TYPESCRIPT ERROR DEMONSTRATION -->
+
+<section class="card">
+
+<h2>Type Safety Example</h2>
+
+<p>
+One of the biggest advantages of TypeScript is <strong>static typing</strong>.
+The compiler checks for mistakes before the program even runs.
+</p>
+
+<pre class="code-block"><code>
+let age: number = 22;
+
+age = "twenty two"; 
+// ❌ TypeScript Error:
+// Type 'string' is not assignable to type 'number'
+</code></pre>
+
+<p>
+JavaScript would allow this mistake, but TypeScript catches it early,
+making your programs more reliable.
+</p>
+
+</section>
+
+
+<!-- REAL WORLD APPLICATIONS -->
+
+<section class="card">
+
+<h2>Where Is TypeScript Used?</h2>
+
+<p>TypeScript is widely used across modern software development.</p>
+
+<ul>
+
+<li><strong>Web Applications</strong> — React, Angular, and modern frontend frameworks</li>
+
+<li><strong>Backend Development</strong> — Node.js APIs and server applications</li>
+
+<li><strong>Mobile Applications</strong> — Ionic and React Native apps</li>
+
+<li><strong>Desktop Software</strong> — Electron applications</li>
+
+<li><strong>Game Development</strong> — Browser based games and engines</li>
+
+</ul>
+
+</section>
+
+
+<!-- GETTING STARTED -->
+
+<section class="card">
+
+<h2>Getting Started with TypeScript</h2>
+
+<p>To begin using TypeScript, you only need a few simple tools.</p>
+
+<pre class="code-block"><code>
+1. Install Node.js
+
+2. Install TypeScript
+   npm install -g typescript
+
+3. Compile TypeScript
+   tsc app.ts
+
+4. Run the generated JavaScript
+   node app.js
+</code></pre>
+
+<p>
+TypeScript code is compiled into JavaScript, which can run in any browser
+or JavaScript runtime.
+</p>
+
+</section>
+
+
+<!-- KEY TAKEAWAYS -->
+
+<section class="card">
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>TypeScript is a typed superset of JavaScript.</li>
+
+<li>It helps detect errors early during development.</li>
+
+<li>It improves maintainability and scalability.</li>
+
+<li>Used widely in modern web applications.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
