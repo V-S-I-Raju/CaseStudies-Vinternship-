@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Variables in TypeScript</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Variables in TypeScript</h1>
+
+<p class="subtitle">
+Learn how TypeScript stores and manages data using variables
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<section class="card">
+
+<h2>Understanding Variables</h2>
+
+<p>
+Variables are like labeled drawers in an office. Each drawer has a name
+and holds a specific type of information. In TypeScript, variables store
+data such as numbers, text, or boolean values.
+</p>
+
+</section>
+
+
+
+<section>
+
+<h2 class="section-title">Types of Variable Declarations</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Type + Value</h3>
+<p>Declare both the type and the value of a variable.</p>
+</div>
+
+<div class="feature-card">
+<h3>Type Only</h3>
+<p>Declare a variable type first, then assign a value later.</p>
+</div>
+
+<div class="feature-card">
+<h3>Type Inference</h3>
+<p>TypeScript automatically determines the variable type.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Variable Naming Rules</h2>
+
+<ul>
+
+<li>Can include letters, numbers, <code>_</code> and <code>$</code></li>
+
+<li>Cannot start with a number</li>
+
+<li>Cannot contain spaces</li>
+
+<li>Cannot use reserved keywords</li>
+
+<li>Variable names are case-sensitive</li>
+
+</ul>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Valid vs Invalid Variable Names</h2>
+
+<pre class="code-block"><code>
+Valid Names
+
+firstName
+first_name
+num1
+$result
+
+
+Invalid Names
+
+first name
+1number
+first-name
+var
+</code></pre>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Example: Variables in TypeScript</h2>
+
+<pre class="code-block"><code>
+var name: string = "John";
+
+var score1: number = 50;
+
+var score2: number = 42.5;
+
+var sum = score1 + score2;
+
+console.log("name: " + name);
+console.log("first score: " + score1);
+console.log("second score: " + score2);
+console.log("sum of scores: " + sum);
+</code></pre>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Strong Typing</h2>
+
+<p>
+TypeScript prevents assigning incorrect types.
+</p>
+
+<pre class="code-block"><code>
+var num: number = "hello"; // Compilation Error
+</code></pre>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Type Assertion</h2>
+
+<pre class="code-block"><code>
+var str = "1";
+
+var str2: number = &lt;number&gt;&lt;any&gt;str;
+
+console.log(typeof(str2));
+</code></pre>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Variable Scope</h2>
+
+<pre class="code-block"><code>
+var global_num = 12;
+
+class Numbers {
+
+num_val = 13;
+
+static sval = 10;
+
+storeNum(): void {
+
+var local_num = 14;
+
+}
+
+}
+
+console.log(global_num);
+console.log(Numbers.sval);
+
+var obj = new Numbers();
+console.log(obj.num_val);
+</code></pre>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Interactive Challenge</h2>
+
+<label>Favorite City</label>
+<input type="text" id="cityInput" placeholder="Enter a city">
+
+<label>Temperature</label>
+<input type="number" id="tempInput" placeholder="Enter temperature">
+
+<label>Is it raining?</label>
+<input type="checkbox" id="rainInput">
+
+<button id="runChallenge">Run Weather Report</button>
+
+<p id="challengeOutput"></p>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Variables store data in TypeScript programs.</li>
+
+<li>They follow specific naming rules.</li>
+
+<li>Types help prevent programming errors.</li>
+
+<li>Type inference allows TypeScript to detect types automatically.</li>
+
+<li>Variable scope determines where variables can be accessed.</li>
+
+</ul>
+
+</section>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
