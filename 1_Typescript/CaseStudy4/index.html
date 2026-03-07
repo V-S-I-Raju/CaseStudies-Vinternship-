@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TypeScript let & const</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>TypeScript – let & const</h1>
+
+<p class="subtitle">
+Control how variables behave and prevent accidental bugs
+</p>
+
+</header>
+
+
+<div class="container">
+
+<!-- FEATURES -->
+
+<section>
+
+<h2 class="section-title">Why Use let and const?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Block Scope</h3>
+<p>Variables declared with let and const only exist inside their block.</p>
+</div>
+
+<div class="feature-card">
+<h3>Safer Code</h3>
+<p>Prevent accidental redeclaration and unexpected changes.</p>
+</div>
+
+<div class="feature-card">
+<h3>Predictable Programs</h3>
+<p>Using const protects values that should never change.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HELLO WORLD -->
+
+<section class="card">
+
+<h2>let Variable Example</h2>
+
+<p>Click the button to run a simple program using <strong>let</strong>.</p>
+
+<button id="runProgram">Run Program</button>
+
+<div class="console">
+
+<h4>Console Output</h4>
+
+<div id="consoleBox"></div>
+
+</div>
+
+</section>
+
+
+<!-- INTERACTIVE CHALLENGE -->
+
+<section class="card">
+
+<h2>Interactive Challenge</h2>
+
+<label>Your Score</label>
+<input type="number" id="scoreInput" placeholder="Enter score">
+
+<label>Your Favorite Country</label>
+<input type="text" id="countryInput" placeholder="Enter country">
+
+<button id="generateGreeting">Run Challenge</button>
+
+<p id="greetingOutput"></p>
+
+</section>
+
+
+<!-- CODE EXAMPLE -->
+
+<section class="card">
+
+<h2>Code Example</h2>
+
+<pre class="code-block"><code>
+let score: number = 50;
+
+const COUNTRY: string = "India";
+
+score = 75;
+
+console.log("Updated Score:", score);
+console.log("Country:", COUNTRY);
+</code></pre>
+
+<ul class="code-explanation">
+
+<li>
+<code>let score</code> creates a variable whose value can change.
+</li>
+
+<li>
+<code>const COUNTRY</code> creates a constant that cannot change.
+</li>
+
+<li>
+<code>score = 75</code> works because let variables can be reassigned.
+</li>
+
+<li>
+Trying to change <code>COUNTRY</code> would cause a TypeScript error.
+</li>
+
+</ul>
+
+<p class="try-text">
+Try changing the values and see how let and const behave!
+</p>
+
+</section>
+
+<section class="card">
+  <h2>Let vs Const: Scope and Errors Demo</h2>
+  <p>Click buttons to see how <code>let</code> and <code>const</code> behave in different scopes and what errors occur.</p>
+
+  <button id="btnLetScope">Show Let Scope Example</button>
+  <button id="btnConstScope">Show Const Scope Example</button>
+  <button id="btnRedeclareLet">Try Redeclaring Let</button>
+  <button id="btnReassignConst">Try Reassigning Const</button>
+
+  <div class="console" id="demoConsole">
+    <h4>Console Output</h4>
+    <pre id="demoOutput"></pre>
+  </div>
+</section>
+
+
+<!-- TYPESCRIPT ERROR DEMONSTRATION -->
+
+<section class="card">
+
+<h2>Const Error Example</h2>
+
+<p>
+Constants cannot be reassigned once they are created.
+</p>
+
+<pre class="code-block"><code>
+const PI: number = 3.14;
+
+PI = 3.15;
+// ❌ TypeScript Error:
+// Cannot assign to 'PI' because it is a constant
+</code></pre>
+
+<p>
+TypeScript prevents changing constants, helping avoid unexpected bugs.
+</p>
+
+</section>
+
+
+<!-- REAL WORLD APPLICATIONS -->
+
+<section class="card">
+
+<h2>Where Are let and const Used?</h2>
+
+<p>These variable declarations are used everywhere in modern development.</p>
+
+<ul>
+
+<li><strong>Web Applications</strong> — Managing UI state</li>
+
+<li><strong>Backend APIs</strong> — Handling request data</li>
+
+<li><strong>Configuration Values</strong> — Constants like API URLs</li>
+
+<li><strong>Game Development</strong> — Scores and game settings</li>
+
+<li><strong>Data Processing</strong> — Loop variables and calculations</li>
+
+</ul>
+
+</section>
+
+
+<!-- GETTING STARTED -->
+
+<section class="card">
+
+<h2>Getting Started with TypeScript</h2>
+
+<p>Compile and run TypeScript using these steps.</p>
+
+<pre class="code-block"><code>
+1. Install Node.js
+
+2. Install TypeScript
+   npm install -g typescript
+
+3. Compile TypeScript
+   tsc app.ts
+
+4. Run JavaScript
+   node app.js
+</code></pre>
+
+</section>
+
+
+<!-- KEY TAKEAWAYS -->
+
+<section class="card">
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Use <strong>let</strong> when a variable value may change.</li>
+
+<li>Use <strong>const</strong> for values that should never change.</li>
+
+<li>Both provide <strong>block scope</strong>.</li>
+
+<li>They help prevent bugs caused by accidental redeclaration.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
